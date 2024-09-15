@@ -1,0 +1,23 @@
+{
+    "Projects": [
+        {
+            "image": "/net-clone.png",
+            "title": "Net-Clone",
+            "description": "A dynamic web application inspired by Netflix, designed to manage and display video content with user authentication,interactive media controls and a stripe payment gateway. The project is showcasing my full-stack development skills using the MERN stack.",
+            "url": "https://net-clone-phi.vercel.app/"
+        },
+        {
+            "image": "invex.png",
+            "title": "INVEX",
+            "description": "An inventory management system named 'INVEX' with a custom UI design including a sidebar with a blueish linear gradient. The project features CRUD operations and dashboard analytics, developed using React and Tailwind CSS.",
+            "url": "https://main.d3c79bn8zth01e.amplifyapp.com/"
+        },
+        {
+            "image": "/sky-view-wealth.png",
+            "title": "Sky View Wealth Application",
+            "description": "Designed and implemented a financial planning tool that helps users manage their investments and financial goals. The application provides interactive tools for budgeting, investment tracking, and personalized financial advice.",
+            "url": "https://sky-view-fp2h143q2-kaleb6737s-projects.vercel.app"
+        }
+       
+    ]
+}

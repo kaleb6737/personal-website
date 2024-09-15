@@ -1,0 +1,58 @@
+.skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .skill-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 300px;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+  
+    .skill-meter {
+      background-color: #007bff;
+      color: white;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      position: relative;
+      transition: width 0.5s ease-in-out;
+  
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to right, rgba(0,123,255,0), #007bff);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+  
+      &:hover:after {
+        opacity: 1;
+      }
+    }
+  
+    .skill-name {
+      z-index: 1;
+    }
+  
+    .skill-percentage {
+      z-index: 1;
+    }
+  }
+  

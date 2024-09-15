@@ -1,0 +1,129 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.project-page {
+    padding-left: 100px;
+    padding-right: 100px;
+    width: calc(100% - 200px);
+    position: initial;
+    height: auto;
+    overflow: hidden;
+}
+
+h1.page-title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.images-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.pictures {
+    position: relative;
+    flex-basis: calc(33.333% - 20px);
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: all 0.5s cubic-bezier(.17,.84,.44,1);
+    animation: fadeIn 1s ease-out forwards;
+    perspective: 1000px; /* Needed for 3D transformations */
+}
+
+.pictures:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.pictures:hover .project-image {
+    transform: scale(1.1);
+}
+
+.content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Smooth background */
+    border-radius: 5px;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+    backdrop-filter: blur(5px); /* Creates a frosted glass effect */
+}
+
+.title, .description {
+    color: white;
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.7);
+    transition: text-shadow 0.3s ease;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.btn {
+    display: block;
+    width: max-content;
+    padding: 10px 25px;
+    margin-top: 10px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(229, 9, 20, 0.4);
+}
+
+.btn:hover {
+    background-color: #f40612;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(229, 9, 20, 0.7);
+}
+
+@media screen and (max-width: 1200px) {
+    .project-page {
+        padding: 50px;
+        width: calc(100% - 100px);
+    }
+
+    .pictures {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project-page {
+        padding: 20px;
+        width: calc(100% - 40px);
+    }
+
+    .pictures {
+        flex-basis: 100%;
+    }
+}

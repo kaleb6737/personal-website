@@ -1,0 +1,66 @@
+.logo-container {
+  z-index: 0;
+  width: 400px;
+  height: 609px;
+  opacity: 1; /* Ensure it's visible */
+  position: absolute;
+  top: 0;
+  right: 15%;
+  bottom: 0;
+  left: auto;
+  margin: auto;
+}
+
+.logo-container svg {
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  transform: rotateZ(30deg);
+  /* Adding a drop shadow to enhance the silhouette */
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.4));
+}
+
+.logo-container .solid-logo {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 10%;
+  left: 150px;
+  margin: auto;
+  width: 110%;
+  opacity: 1; /* Ensure it's visible */
+  transform: rotateZ(10deg);
+  z-index: 1;
+  transition: transform 5s cubic-bezier(0.25, 0.8, 0.25, 1); /* Further slowed down for smoother transitions */
+}
+
+.logo-container .solid-logo:hover {
+  transform: scale(1.1) rotateZ(15deg); /* Slight enlargement and rotation on hover */
+}
+
+.logo-container .solid-logo:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  right: -10%;
+  bottom: -10%;
+  background-color: rgba(255, 255, 255, 0.1); /* Light silhouette */
+  z-index: -1;
+  transition: background-color 0.8s ease-in-out; /* Slowed down for smoother transition */
+}
+
+.logo-container .solid-logo:hover:before {
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly darker silhouette on hover */
+}
+
+.logo-container .svg-container {
+  stroke: #ffd700;
+  stroke-width: 10;
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.6)); /* Enhanced shadow for depth */
+  transition: stroke-width 0.8s ease-in-out; /* Extended duration for smoother stroke-width transition */
+}
+
+.logo-container .svg-container:hover {
+  stroke-width: 15; /* Thicker stroke on hover */
+}
