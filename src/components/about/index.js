@@ -2,8 +2,8 @@ import './index.scss';
 import AnimatedLetters from "../AnimatedLetters";
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faJava, faJs, faPython, faReact } from '@fortawesome/free-brands-svg-icons';
-import { faHtml5 as FaHtml, faCss3Alt as FaCss3, faAngular as FaAngular} from '@fortawesome/free-brands-svg-icons';
+import { faJava, faJs, faPython, faReact } from 'react-icons/fa'
+import { faHtml5 as FaHtml, faCss3Alt as FaCss3, faAngular as FaAngular} from 'react-icons/fa'
 import { faC } from '@fortawesome/free-solid-svg-icons';
 import Loader from 'react-loaders'
 
