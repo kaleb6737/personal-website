@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Loader from 'react-loaders';
 import AnimatedLetters from '../AnimatedLetters';
 import './index.css';
+
 const Contact = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
 
@@ -9,7 +10,8 @@ const Contact = () => {
         const timer = setTimeout(() => {
             setLetterClass('text-animate-hover');
         }, 3000);
-        return () => clearTimeout(timer);
+
+        return () => clearTimeout(timer); // Clear timeout on unmount
     }, []);
 
     return (
@@ -33,7 +35,7 @@ const Contact = () => {
                         Alternatively, you can reach me by filling out the form on this website. Please provide the necessary details, and I will respond as promptly as possible.
                     </p>
 
-                    {/* Formspree Form */}
+                    {/* Contact Form */}
                     <div className="contact-form">
                         <form action="https://formspree.io/f/mqazolbp" method="POST">
                             <ul>
@@ -53,7 +55,7 @@ const Contact = () => {
                                         placeholder="Subject"
                                         type="text"
                                         name="subject"
-                                        required 
+                                         
                                     />
                                 </li>
                                 <li>

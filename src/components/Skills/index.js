@@ -59,7 +59,7 @@ const Skills = () => {
                             idx={15}
                         />
                     </h1>
-                    <p className="text-lg text-gray-300 leading-relaxed ml-10">
+                    <p className="text-lg text-gray-100 leading-relaxed ml-10">
                         My skill set spans across both frontend and backend technologies, allowing me to build comprehensive and scalable web applications. 
                         Whether it's creating rich user interfaces with technologies like React and Next.js, or building efficient, server-side applications with Node.js, 
                         Express, and Python, I ensure the best practices in coding, security, and performance.

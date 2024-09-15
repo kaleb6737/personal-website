@@ -1,77 +1,63 @@
 import { Link, NavLink } from 'react-router-dom';
 import './index.scss';
 import LogoS from '../../assets/images/logo-s.png';
-import LogoSubtitle from '../../assets/images/logo_sub.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faClose,faWifi,faEnvelope, faHome, faProjectDiagram, faUser } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';  // Correct import for faLinkedin
+import { FaBars, FaTimes, FaEnvelope, FaHome, FaProjectDiagram, FaUser, FaGithub, FaLinkedin,FaCalculator} from 'react-icons/fa'; // Using react-icons for non-SVG icons
 import { useState } from 'react';
 
-
 const Sidebar = () => {
-    const[showNav, setShowNav] = useState(false);
-
+    const [showNav, setShowNav] = useState(false);
 
     return (
         <div className="nav-bar">
             <Link className='logo' to='/'>
                 <img src={LogoS} alt="logo" /> 
-                {/* <img className="sub-logo" src={LogoSubtitle} alt="slobodan"/>   */}
             </Link>
             <nav className={showNav ? 'mobile-show' : ''}>
-                <NavLink exact={true}  onClick= {() => setShowNav(false)}activeClassName="active" to="/">
-                    <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
+                <NavLink exact="true" onClick={() => setShowNav(false)} activeClassName="active" to="/">
+                    <FaHome color="#4d4d4e" size={30} />
                 </NavLink>
-                <NavLink exact={true}  onClick= {() => setShowNav(false)}activeClassName="active" className="about-link" to="/about">
-                    <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
+                <NavLink exact="true" onClick={() => setShowNav(false)} activeClassName="active" className="about-link" to="/about">
+                    <FaUser color="#4d4d4e" size={30} />
                 </NavLink>
-                <NavLink exact={true}  onClick= {() => setShowNav(false)}activeClassName="active" className="contact-link" to="/contact">
-                    <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
+                <NavLink exact="true" onClick={() => setShowNav(false)} activeClassName="active" className="contact-link" to="/contact">
+                    <FaEnvelope color="#4d4d4e" size={30} />
+                </NavLink>
+                <NavLink exact="true" onClick={() => setShowNav(false)} activeClassName="active" className="skills-link" to="/skills">
+                    <FaCalculator color="#4d4d4e" size={30} />
+                </NavLink>
+                <NavLink exact="true" onClick={() => setShowNav(false)} activeClassName="active" className="projects-link" to="/portfolio">
+                    <FaProjectDiagram color="#4d4d4e" size={30} />
                 </NavLink>
 
-                <NavLink exact={true}  onClick= {() => setShowNav(false)} activeClassName="active" className="skills-link" to="/skills">
-                    <FontAwesomeIcon icon={faWifi} color="#4d4d4e" />
-                </NavLink>
-                <NavLink exact={true}  onClick= {() => setShowNav(false)} activeClassName="active" className="projects-link" to="/portfolio">
-                    <FontAwesomeIcon icon={faProjectDiagram} color="#4d4d4e" />
-                </NavLink>
-
-
-                <FontAwesomeIcon
-                onClick= {() => setShowNav(false)}
-                icon={faClose}
-                color="#ffffff"
-                size="3x"
-                className='close-icon'
+                <FaTimes
+                    onClick={() => setShowNav(false)}
+                    color="#ffffff"
+                    size={30}
+                    className='close-icon'
                 />
             </nav>
+
             <ul>
                 <li>
                     <a target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/kaleb-demissie-7a302a267/'>
-                        <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
+                        <FaLinkedin color="#4d4d4e" size={30} />
                     </a>
                 </li>
                 <li>
                     <a target="_blank" rel="noreferrer" href='https://github.com/kaleb6737/'>
-                        <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
+                        <FaGithub color="#4d4d4e" size={30} />
                     </a>
-                </li>
-
-                <li>
-                 
                 </li>
             </ul>
 
-            <FontAwesomeIcon
+            <FaBars
                 onClick={() => setShowNav(true)}
-                icon={faBars}
-                color="ffffff"
-                size="3x"
+                color="#ffffff"
+                size={30}
                 className="hamburger-icon"
             /> 
-        </div>  
+        </div>
     );
 };
 
 export default Sidebar;
-
