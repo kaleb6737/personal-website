@@ -32,6 +32,7 @@ const Skills = () => {
         { name: 'PostgreSQL', level: 78, icon: <SiPostgresql className="text-blue-700" size={40} /> },
         { name: 'Firebase', level: 78, icon: <SiFirebase className="text-yellow-500" size={40} /> },
         { name: 'MySQL', level: 80, icon: <SiMysql className="text-blue-500" size={40} /> },
+       
     ];
 
     const toolsSkills = [
